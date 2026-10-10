@@ -1141,6 +1141,7 @@ impl super::Queue {
                         None,
                     )
                 };
+                unsafe { gl.disable(glow::SCISSOR_TEST) };
                 unsafe {
                     gl.blit_framebuffer(
                         0,
